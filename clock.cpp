@@ -122,11 +122,11 @@ void Clock::TickTock()
 		}
 		case 10: {
 			std::vector<Clock> v;
-			cnt_dtor_ = 2 - 2;
-			for (int i = 0; i < 6; ++i) {
+			cnt_dtor_ = 0;
+			for (int i = 2; i <= 6 - 2; ++i) {
 				v.emplace_back();
 			}
-			time = cnt_dtor_;
+			time = cnt_dtor_ + 2 + ~0 + !2 + 6;
 			break;
 		}
 		case 11: {
