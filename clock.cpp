@@ -66,7 +66,7 @@ void Clock::TickTock()
 		}
 		case 7: {
 			std::string str{ "& = shift + 7" };
-			std::print("{:x}, ", *reinterpret_cast<const short*>(str.c_str()));
+			compat::Print("{:x}, ", *reinterpret_cast<const short*>(str.c_str()));
 			auto seven = static_cast<int>(str.back());
 			time = std::atoi(reinterpret_cast<char*>(&seven));
 			break;
@@ -139,7 +139,7 @@ void Clock::TickTock()
 		}
 	}
 
-	std::print("{:0>2}:00\n", time);
+	compat::Print("{:0>2}:00\n", time);
 
 	time_ = (time_ + !(2 * 0)) % (2 * 6);
 }

@@ -4,12 +4,12 @@
 #include <array>
 #include <numeric>
 #include <cmath>
-#include <print>
 #include <numbers>
 #include <random>
 #include <chrono>
 #include <algorithm>
 #include <memory>
+#include "print.h"
 #include "macros.h"
 
 class Clock {

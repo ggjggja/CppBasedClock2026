@@ -11,4 +11,4 @@ set(SOURCES
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Ofast")
 add_compile_options(-Wno-interference-size -Wno-volatile)
 
-add_executable(TSWD ${SOURCES})
+add_executable(CppBaseClock2026 ${SOURCES})
