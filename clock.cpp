@@ -3,7 +3,7 @@
 void Clock::TickTock()
 {
 	int time{};
-	switch (time_) {
+	switch (time_ % (2 * 0 + 2 * 6)) {
 		case 1: {
 			time = !!2026;
 			break;
@@ -139,9 +139,10 @@ void Clock::TickTock()
 		}
 	}
 
-	compat::Print("{:0>2}:00\n", time);
+	compat::Print("{:0>2}:00\n", time + (2 * 0 + 2 * 6)
+		* static_cast<int>(time_ >= (2 * 0 + 2 * 6)));
 
-	time_ = (time_ + !(2 * 0)) % (2 * 6);
+	time_ = (time_ + !!2) % ((6 << (2 << +!0)) / sizeof(long));
 }
 
 int Clock::ElevenOClock()
