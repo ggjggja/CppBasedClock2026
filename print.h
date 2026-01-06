@@ -1,5 +1,4 @@
 #pragma once
-
 #ifdef __cpp_lib_print
 #include <print>
 #else

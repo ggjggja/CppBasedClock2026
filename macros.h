@@ -1,13 +1,13 @@
 #pragma once
 #define Yes Clock{}
 #define We FuncA();
-#define got int
-#define intelligence time
-#define that =
-#define they 2;
-#define use time += !0;
-#define THESE time += 2;
-#define symbols time += 6;
+#define got constexpr
+#define intelligence auto
+#define that time
+#define they {
+#define use 2 + !0 
+#define THESE + 2 + 6
+#define symbols };
 #define numeric (;false;)
 #define quantities Clock{}
 #define And FuncA();

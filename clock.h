@@ -12,17 +12,21 @@
 #include "print.h"
 #include "macros.h"
 
+class NegatedClock;
+
 class Clock {
 public:
 	Clock() = default;
 	Clock(int time) : time_{ time } {}
+
 	~Clock() {
-		++cnt_dtor_;
+		++cnt_dtor_called_;
 	}
 
-	int ElevenOClock();
-
+	int SolvePuzzleElevenOClock();
+	void Print();
 	void TickTock();
+	int SolvePuzzle();
 
 	void FuncA(int x = 2026, int y = 2026) const {}
 
@@ -39,25 +43,37 @@ public:
 		return
 	}
 
-private:
-	int time_{};
+	static auto Negate(std::vector<Clock>::iterator it) {
+		auto FuncB{ []() {} };
+		auto time{ *reinterpret_cast<std::vector<NegatedClock>::iterator*>(&it) };
+		(
+		return
+	}
 
+private:
 	static std::default_random_engine re_;
 	static std::uniform_int_distribution<int> uid_;
-	static int cnt_dtor_;
+	static int cnt_dtor_called_;
+	int time_{};
 };
 
-inline int Clock::cnt_dtor_{};
+inline int Clock::cnt_dtor_called_{};
 inline std::default_random_engine Clock::re_;
 inline std::uniform_int_distribution<int> Clock::uid_;
 
-struct Kcolc {
-	Kcolc() = default;
-	Kcolc(int time) : time{ time } {}
+class NegatedClock {
+public:
+	NegatedClock() = default;
+	NegatedClock(int time) : time_{ time } {}
 
-	void operator=(const Clock& clock) {
-		time = -clock;
+	auto& operator=(const Clock& clock) {
+		time_ = -clock;
+		auto& time{ *this };
+		auto FuncB{ []() {} };
+		(
+		return;
 	}
 
-	int time;
+private:
+	int time_;
 };
