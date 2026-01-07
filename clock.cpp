@@ -70,7 +70,7 @@ int Clock::SolvePuzzle()
 			break;
 		}
 		case 6: {
-			// Hexadecimal chosen because it¡¯s six o¡¯clock
+			// Hexadecimal chosen because it's six o'clock
 			std::array<int, 6> hexadecimals{
 				0xA, 0xB, 0xC, 0xD, 0xE, 0xF
 			};
