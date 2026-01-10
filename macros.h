@@ -25,4 +25,13 @@
 #define But 2026);
 #define all
 #define have
-#define return FuncB()); return time;
+
+#define They FuncB());
+#define are
+#define likely
+#define conveying
+#define the
+#define concept
+#define of
+
+#define return ; return time;

@@ -182,7 +182,7 @@ int Clock::SolvePuzzle()
 	}
 
 	auto time{ answer };
-	(return;
+	return
 }
 
 void Clock::TickTock()
@@ -205,6 +205,7 @@ int Clock::SolvePuzzleElevenOClock()
 	And observing their piles of pebbles,
 	Every pile has a different configuration,
 	But all have 7 pebbles.
+	They are likely conveying the concept of 7.
 
 	return 2026;
 }

@@ -32,21 +32,16 @@ public:
 
 	int FuncB() const {
 		int time{};
-		auto FuncB{ []() {} };
-		(
 		return
 	}
 
 	operator int() const {
 		int time{ time_ };
-		(
 		return
 	}
 
 	static auto Negate(std::vector<Clock>::iterator it) {
-		auto FuncB{ []() {} };
 		auto time{ *reinterpret_cast<std::vector<NegatedClock>::iterator*>(&it) };
-		(
 		return
 	}
 
@@ -69,9 +64,7 @@ public:
 	auto& operator=(const Clock& clock) {
 		time_ = -clock;
 		auto& time{ *this };
-		auto FuncB{ []() {} };
-		(
-		return;
+		return
 	}
 
 private:
